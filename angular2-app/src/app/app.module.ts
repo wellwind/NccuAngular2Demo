@@ -1,3 +1,4 @@
+import { AddValueService } from './add-value.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,7 @@ import { AddValueFormComponent } from './add-value-form/add-value-form.component
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AddValueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
