@@ -1,3 +1,4 @@
+import { AddValueService } from './../add-value.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,14 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddValueFormComponent implements OnInit {
 
-  value = 50;
-
-  constructor() { }
+  constructor(private addValService: AddValueService) { }
 
   ngOnInit() {
   }
 
   addClick() {
-    this.value = +this.value + 10;
+    this.addValService.add10();
   }
 }
